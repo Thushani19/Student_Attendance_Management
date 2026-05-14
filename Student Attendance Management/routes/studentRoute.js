@@ -1,6 +1,6 @@
 import express from "express";
 
-import { create, deleteAttendance, fetch, update} from "../Controller/userController.js";
+import { create, deleteAttendance, fetch, update} from "../Controller/StudentController.js";
 
 const route  = express.Router();
 
