@@ -55,20 +55,20 @@ export const update = async(req, res)=>{
 
 export const deleteAttendance = async(req, res)=>{
     try{
-       
         const id = req.params.id;
-        
-        const AttendanceExist = await Attendance.findOne({_id:id})
+
+        const AttendanceExist = await Attendance.findOne({_id:id});
+
         if(!AttendanceExist){
-            return res.status(404).json({message : "Student not found."});
+            return res.status(404).json({message:"Student not found."});
         }
 
-        await Attendance.findOneAndDelete(id);
-       
-       res.status(201).json({message: "studentId deleted Successfully."});
-        
-    } catch(error){
-        
-        res.status(500).json({error: "Internal server Error."});
+        await Attendance.findByIdAndDelete(id);
+
+        res.status(201).json({message : "Student exam_attendance deleted successfully"});
+    }
+    catch{
+        res.status(500).json({error : "Internal server error."});
     }
 }
+

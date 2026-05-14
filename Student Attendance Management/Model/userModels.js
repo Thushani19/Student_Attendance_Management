@@ -8,7 +8,7 @@ const attendanceSchema = new mongoose.Schema({
   },
 
   studentId: {
-    type: String,
+    type: Number,
     required: true
   },
 
