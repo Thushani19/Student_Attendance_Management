@@ -61,7 +61,6 @@ ICA -03 Project
 
         1. Package installation
               Eg:- npm init, npm i express
-
         2. Run project
         3. Postman testing
 
